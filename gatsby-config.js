@@ -1,47 +1,96 @@
-require(`dotenv`).config({
-  path: `.env`,
+const path = require('path')
+const config = require('./data/config')
+
+require('dotenv').config({
+	path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
-  siteMetadata: {
-    siteTitleAlt: `David O'Regan | Web Developer Portfolio`,
-  },
-  plugins: [
-    {
-      resolve: `@lekoarts/gatsby-theme-cara`,
-      options: {},
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
+	siteMetadata: {
+		title: config.defaultTitle,
+		description: config.defaultDescription,
+		author: config.author,
+	},
+	plugins: [
+		'gatsby-plugin-react-helmet',
+		'gatsby-plugin-styled-components',
+		/* {
+      resolve: 'gatsby-source-filesystem',
       options: {
-        trackingId: 'UA-149404236-1',
+        name: 'assets',
+        path: '${__dirname}/src/assets',
       },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `David O'Regan | Web Developer Portfolio`,
-        short_name: `David O'Regan`,
-        description: `David O'Regan - I like to build stuff for the web.`,
-        start_url: `/`,
-        background_color: `#141821`,
-        theme_color: `#f6ad55`,
-        display: `standalone`,
-        icons: [
-          {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
-      },
-    },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
-  ],
+    }, */
+		'gatsby-transformer-sharp',
+		'gatsby-plugin-sharp',
+		{
+			resolve: 'gatsby-source-graphql',
+			options: {
+				typeName: 'GitHub',
+				fieldName: 'github',
+				url: 'https://api.github.com/graphql',
+				headers: {
+					Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+				},
+				fetchOptions: {},
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-nprogress',
+			options: {
+				color: config.themeColor,
+				showSpinner: false,
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-google-analytics',
+			options: {
+				trackingId: config.googleAnalyticsID,
+				head: true,
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-favicon',
+			options: {
+				logo: './static/favicon/favicon-512.png',
+				injectHTML: true,
+				icons: {
+					android: true,
+					appleIcon: true,
+					appleStartup: true,
+					coast: false,
+					favicons: true,
+					firefox: true,
+					twitter: false,
+					yandex: false,
+					windows: false,
+				},
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-manifest',
+			options: {
+				name: config.defaultTitle,
+				short_name: 'starter',
+				start_url: '/',
+				background_color: config.backgroundColor,
+				theme_color: config.themeColor,
+				display: 'minimal-ui',
+				icon: './static/favicon/favicon-512.png',
+			},
+		},
+		'gatsby-plugin-offline',
+		{
+			resolve: `gatsby-plugin-alias-imports`,
+			options: {
+				alias: {
+					Components: path.resolve(__dirname, 'src/components'),
+					Common: path.resolve(__dirname, 'src/components/common'),
+					Static: path.resolve(__dirname, 'static/'),
+					Theme: path.resolve(__dirname, 'src/components/theme'),
+					Data: path.resolve(__dirname, 'data/config'),
+				},
+			},
+		},
+	],
 }
