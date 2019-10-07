@@ -13,7 +13,7 @@ module.exports = {
 		youtube: 'https://www.youtube.com/user/smakoshthegamer',
 		google: 'https://plus.google.com/u/0/+IsmailSmakoshGhallou',
 	},
-	googleAnalyticsID: 'UA-88875900-4',
+	googleAnalyticsID: 'UA-149404236-1',
 	themeColor: '#6b63ff',
 	backgroundColor: '#6b63ff',
 	social: {

@@ -13,7 +13,7 @@ export const Skills = () => (
 			<Details>
 				<h1>Hi There!</h1>
 				<p>
-					Im Irish software developer from Ireland. I explain with words and code. Former head of frontend at VSWare LTD. Passionate about JavaScript, React, Functional Programming and all things maths.
+					I'm an Irish software developer from Ireland. I explain with words and code. Former head of frontend at VSWare LTD. Passionate about JavaScript, React, Functional Programming and all things maths.
 				</p>
 				<p>
 					I offer freelance work building websites for all types of clients, though my specialty is in e-commerce and SEO. If you want a small business website, a online portfolio, an IOS/Android App or anything bigger, give me a shout.
