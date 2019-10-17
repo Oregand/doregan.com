@@ -1,4 +1,5 @@
 export * from './Intro'
 export * from './Skills'
+export * from './Prices'
 export * from './Contact'
 export * from './Projects'
