@@ -39,7 +39,7 @@ export const Prices = () => (
                 </CardRibbon>
                 <CardTitle>
                     <h3>Medium Website</h3>
-                    <h4>Simple complexity / 2 - 5 page website</h4>
+                    <h4>Moderate complexity / 5 - 15 page website</h4>
                     <h4>Suitable for e-commerce, complex portfolio or simple mobile app</h4>
                 </CardTitle>
                 <CardPrice>
@@ -66,7 +66,7 @@ export const Prices = () => (
             <Card>
                 <CardTitle>
                     <h3>Large Website</h3>
-                    <h4>Simple complexity / 2 - 5 page website</h4>
+                    <h4>High complexity / 15 - 25 page website</h4>
                     <h4>Suitable for e-commerce, complex portfolio or complex mobile app</h4>
                 </CardTitle>
                 <CardPrice>
