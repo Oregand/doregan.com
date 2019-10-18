@@ -5,6 +5,7 @@ import { Wrapper, PricesWrapper, Card, CardPopular, CardRibbon, CardAction, Card
 
 export const Prices = () => (
 	<Wrapper id="prices">
+        <h2>What I Charge</h2>
 		<PricesWrapper as={Container}>
             <Card>
                 <CardTitle>
@@ -40,7 +41,7 @@ export const Prices = () => (
                 <CardTitle>
                     <h3>Medium Website</h3>
                     <h4>Moderate complexity / 5 - 15 page website</h4>
-                    <h4>Suitable for e-commerce, complex portfolio or simple mobile app</h4>
+                    <h4>Suitable for e-commerce, complex portfolio or simple mobile apps</h4>
                 </CardTitle>
                 <CardPrice>
                     <h1>
@@ -67,7 +68,7 @@ export const Prices = () => (
                 <CardTitle>
                     <h3>Large Website</h3>
                     <h4>High complexity / 15 - 25 page website</h4>
-                    <h4>Suitable for e-commerce, complex portfolio or complex mobile app</h4>
+                    <h4>Suitable for e-commerce, complex portfolio or complex mobile apps</h4>
                 </CardTitle>
                 <CardPrice>
                     <h1>

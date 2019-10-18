@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	background-size: contain;
-	background-position: left top;
-	background-repeat: no-repeat;
+	padding: 2rem 0;
+	display: flex;
+	flex-flow: column;
 `
 
 export const PricesWrapper = styled.div`
