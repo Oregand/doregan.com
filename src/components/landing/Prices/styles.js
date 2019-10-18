@@ -4,6 +4,10 @@ export const Wrapper = styled.div`
 	padding: 2rem 0;
 	display: flex;
 	flex-flow: column;
+	
+	h2 {
+	  text-align: center;
+	}
 `
 
 export const PricesWrapper = styled.div`

@@ -24,7 +24,7 @@ export const Travel = () => {
 	console.log(allInstaNode)
 
 	return (
-		<Wrapper id="about">
+		<Wrapper id="travel">
 			<TravelWrapper as={Container}>
 				<Thumbnail>
 					<img src={dev} alt="I’m David and I’m a Frontend engineer!"/>
