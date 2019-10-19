@@ -8,8 +8,8 @@ const NavbarLinks = ({ desktop }) => (
 		<AnchorLink href="#projects">Projects</AnchorLink>
 		<AnchorLink href="#prices">Prices</AnchorLink>
 		<AnchorLink href="#travel">Travel</AnchorLink>
-		<AnchorLink href="/blog">Blog</AnchorLink>
 		<AnchorLink href="#contact">Contact</AnchorLink>
+		<a href="/blog">Blog</a>
 	</Wrapper>
 )
 
