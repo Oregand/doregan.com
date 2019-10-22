@@ -65,15 +65,6 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-source-instagram`,
-			options: {
-			  type: `user-profile`,
-			  username: `regandavido`,
-				access_token: '21501957812.1677ed0.6eebd468f3d5432abdb72d163f96dab9',
-				instagram_id: "21501957812",
-			},
-		  },
-		{
 			resolve: 'gatsby-plugin-nprogress',
 			options: {
 				color: config.themeColor,
