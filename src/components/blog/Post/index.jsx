@@ -6,27 +6,7 @@ import forkIcon from 'Static/icons/fork.svg'
 import { Wrapper, Grid, Item, Content, Stats } from './styles'
 
 export const Post = () => {
-	const {
-		allMarkdownRemark
-	} = useStaticQuery(graphql`
-		{
-			allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-			  edges {
-				node {
-				  excerpt
-				  frontmatter {
-					date(formatString: "MMMM DD, YYYY")
-					title
-					description
-					path
-				  }
-				}
-			  }
-			}
-		}
-	`)
-
-	console.log(allMarkdownRemark)
+	const allMarkdownRemark = { edges: [] }
 	return (
 		<Wrapper as={Container} id="posts">
 			<h2>Posts</h2>
