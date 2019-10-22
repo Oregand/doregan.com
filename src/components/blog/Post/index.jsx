@@ -5,7 +5,7 @@ import starIcon from 'Static/icons/star.svg'
 import forkIcon from 'Static/icons/fork.svg'
 import { Wrapper, Grid, Item, Content, Stats } from './styles'
 
-export const Posts = () => {
+export const Post = () => {
 	const {
 		allMarkdownRemark
 	} = useStaticQuery(graphql`
