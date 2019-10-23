@@ -6,9 +6,9 @@ module.exports = {
 	legalName: 'David O Regan',
 	defaultDescription: 'I’m David O Regan and I am a Frontend/JavaScript developer.',
 	socialLinks: {
-		twitter: 'http://www.twitter.com/oregand',
+		twitter: 'http://www.twitter.com/doregan',
 		github: 'https://github.com/oregand',
-		linkedin: 'https://www.linkedin.com/in/david-o-regan-630149122/',
+		linkedin: 'https://www.linkedin.com/in/oregand7/',
 		instagram: 'https://instagram.com/regandavido',
 		youtube: 'https://www.youtube.com/user/oregand',
 		google: 'https://plus.google.com/u/0/+DavidORegan',

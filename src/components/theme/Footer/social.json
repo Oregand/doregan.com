@@ -14,7 +14,13 @@
   {
     "id": 2,
     "name": "Twitter",
-    "link": "https://twitter.com/oregand",
+    "link": "https://twitter.com/doregan",
     "icon": "/icons/twitter.svg"
+  },
+  {
+    "id": 3,
+    "name": "Linkedin",
+    "link": "https://www.linkedin.com/in/oregand7/",
+    "icon": "/icons/fork.svg"
   }
 ]
