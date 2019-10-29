@@ -4,7 +4,7 @@ module.exports = {
 	author: 'David O Regan',
 	url: 'https://doregan.com',
 	legalName: 'David O Regan',
-	defaultDescription: 'I’m David O Regan and I am a Frontend/JavaScript developer.',
+	defaultDescription: 'I’m David O Regan and I am a Frontend/JavaScript developer from Ireland. I like to build websites and apps in my spare time, write about software and my experience as a developer.',
 	socialLinks: {
 		twitter: 'http://www.twitter.com/doregan',
 		github: 'https://github.com/oregand',
