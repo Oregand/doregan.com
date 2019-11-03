@@ -25,10 +25,7 @@ export const Post = () => {
 			<Grid>
 					<Item
 						key={markdownRemark.frontmatter.path}
-						as="a"
-						href={markdownRemark.frontmatter.path}
-						target="_blank"
-						rel="noopener noreferrer"
+						as="div"
 					>
 						<Card>
 							<Content>
