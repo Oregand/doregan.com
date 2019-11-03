@@ -1,9 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Container, Card } from 'Common'
-import starIcon from 'Static/icons/star.svg'
-import forkIcon from 'Static/icons/fork.svg'
-import { Wrapper, Grid, Item, Content, Stats } from './styles'
+import { Wrapper, Grid, Item, Content } from './styles'
 
 export const Post = () => {
 	const {
