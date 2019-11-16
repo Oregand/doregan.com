@@ -1,6 +1,6 @@
 ---
 title: Speed Of Iteration Beats Quality Of Iteration
-date: "2019-10-28T22:12:03.284Z"
+date: "2019-11-16T22:12:03.284Z"
 path: /speed-of-iteration-beats-quality-of-iteration
 description: "Speed Of Iteration Beats Quality Of Iteration"
 ---
