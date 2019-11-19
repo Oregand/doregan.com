@@ -17,7 +17,7 @@ const BlodPost = ({ data }) => {
 export default BlodPost;
 
 export const query = graphql`
-  query($pathSlug: String!) {
+  query($pathSlug: String) {
     markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
       html
       frontmatter {
