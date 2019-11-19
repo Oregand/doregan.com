@@ -1,23 +1,8 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Container, Card } from 'Common'
 import { Wrapper, Grid, Item, Content } from './styles'
 
-export const Post = () => {
-	const {
-		markdownRemark
-		} = useStaticQuery(graphql`
-			{
-			markdownRemark {
-			  html
-			  frontmatter {
-				date(formatString: "MMMM DD, YYYY")
-				path
-				title
-			  }
-			}
-		}
-	`)
+export const Post = ({ markdownRemark }) => {
 	return (
 		<Wrapper as={Container} id="post">
 			<Grid>

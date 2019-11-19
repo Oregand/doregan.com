@@ -1,7 +1,7 @@
 ---
 title: Publish A Progressive Web App To The google Play Store
 date: "2019-11-06T22:12:03.284Z"
-path: /publish-pwa-to-play-store
+path: /blog/publish-pwa-to-play-store
 description: "Publish A Progressive Web App To The google Play Store"
 ---
 

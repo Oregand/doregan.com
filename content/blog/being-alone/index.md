@@ -1,7 +1,7 @@
 ---
 title: How To Be Alone And Be Happy
 date: "2019-11-17T22:12:03.284Z"
-path: /how-to-be-alone-and-be-happy
+path: /blog/how-to-be-alone-and-be-happy
 description: "How To Be Alone And Be Happy"
 ---
 

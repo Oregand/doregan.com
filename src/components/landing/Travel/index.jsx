@@ -12,7 +12,7 @@ const Gram = ({ src, code }) => (
     target="_blank"
     aria-label="Instagram Post Link"
   >
-    <img background src={src} lazy alt="instagram image" />
+    <img background src={src} lazy alt="instagram" />
   </a>
 )
 

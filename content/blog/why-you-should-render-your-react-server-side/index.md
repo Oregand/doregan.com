@@ -1,7 +1,7 @@
 ---
 title: Why You Should Render Your React Server Side With Examples In Now && NextJS
 date: "2019-11-18T22:12:03.284Z"
-path: /why-you-should-render-your-react-server-side
+path: /blog/why-you-should-render-your-react-server-side
 description: "Why You Should Render Your React Server Side With Examples In Now && NextJS"
 ---
 

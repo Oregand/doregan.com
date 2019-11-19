@@ -32,12 +32,9 @@ export const Posts = () => {
 				{allMarkdownRemark.edges.map(({ node }) => (
 					<Item
 						key={node.id}
-						as="a"
-						href={node.url}
-						target="_blank"
-						rel="noopener noreferrer"
+						as={Link}
+						to={node.frontmatter.path}
 					>
-						<Link style={{ boxShadow: `none` }} to={node.frontmatter.path}>
 						<Card>
 							<Content>
 								<h4>{node.frontmatter.title}</h4>
@@ -55,7 +52,6 @@ export const Posts = () => {
 								</div>
 							</Stats>
 						</Card>
-						</Link>
 					</Item>
 				))}
 			</Grid>

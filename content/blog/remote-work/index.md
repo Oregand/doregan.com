@@ -1,7 +1,7 @@
 ---
 title: Remote Work - Why Its Better And How To Do It
 date: "2019-10-28T22:12:03.284Z"
-path: /remote-work
+path: /blog/remote-work
 description: "Remote Work"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Dev Wankery - Why It Sucks
 date: "2019-10-31T22:12:03.284Z"
-path: /dev-wankery
+path: /blog/dev-wankery
 description: "Dev Wankery"
 ---
 
