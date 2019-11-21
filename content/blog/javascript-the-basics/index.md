@@ -198,7 +198,7 @@ With curly braces: (...args) => { body } – brackets allow us to write multiple
 
 ## Conclusion
 
-Code structure
+> Code structure
 
 Statements are delimited with a semicolon:
 
@@ -237,8 +237,7 @@ for(;;) {
 
 …But even if we can put an “extra” semicolon somewhere, that’s not an error. It will be ignored.
 
-More in: Code structure.
-Strict mode
+> Strict mode
 
 To fully enable all features of modern JavaScript, we should start scripts with "use strict".
 
@@ -252,8 +251,7 @@ Without "use strict", everything still works, but some features behave in the ol
 
 Some modern features of the language (like classes that we’ll study in the future) enable strict mode implicitly.
 
-More in: The modern mode, "use strict".
-Variables
+> Variables
 
 Can be declared using:
 
@@ -309,11 +307,11 @@ alert( "Visitor: " + userName ); // Alice
 alert( "Tea wanted: " + isTeaWanted ); // true
 ```
 
-Operators
+> Operators
 
 JavaScript supports the following operators:
 
-Arithmetical
+> Arithmetical
 
     Regular: * + - /, also % for the remainder and ** for power of a number.
 
@@ -322,19 +320,23 @@ Arithmetical
     alert( '1' + 2 ); // '12', string
     alert( 1 + '2' ); // '12', string
 
-Assignments
+> Assignments
 
     There is a simple assignment: a = b and combined ones like a *= 2.
-Bitwise
+
+> Bitwise
 
     Bitwise operators work with 32-bit integers at the lowest, bit-level: see the docs when they are needed.
-Conditional
+
+> Conditional
 
     The only operator with three parameters: cond ? resultA : resultB. If cond is truthy, returns resultA, otherwise resultB.
-Logical operators
+
+> Logical operators
 
     Logical AND && and OR || perform short-circuit evaluation and then return the value where it stopped (not necessary true/false). Logical NOT ! converts the operand to boolean type and returns the inverse value.
-Comparisons
+
+> Comparisons
 
     Equality check == for values of different types converts them to a number (except null and undefined that equal each other and nothing else), so these are equal:
 
@@ -352,8 +354,7 @@ Other operators
 
     There are few others, like a comma operator.
 
-More in: Operators, Comparisons, Logical operators.
-Loops
+> Loops
 
     We covered 3 types of loops:
 
@@ -447,7 +448,7 @@ let sayHi = () => alert("Hello");
 let double = n => n * 2;
 ```
 
-    Functions may have local variables: those declared inside its body. Such variables are only visible inside the function.
-    Parameters can have default values: function sum(a = 1, b = 2) {...}.
-    Functions always return something. If there’s no return statement, then the result is undefined.
+Functions may have local variables: those declared inside its body. Such variables are only visible inside the function.
+Parameters can have default values: `function sum(a = 1, b = 2) {...}.`
+Functions always return something. If there’s no return statement, then the result is undefined.
 
