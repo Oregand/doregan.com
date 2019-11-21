@@ -196,7 +196,7 @@ Without curly braces: (...args) => expression – the right side is an expressio
 With curly braces: (...args) => { body } – brackets allow us to write multiple statements inside the function, but we need an explicit return to return something.
 
 
-## Conclusion
+## TLDR
 
 > Code structure
 
@@ -451,4 +451,9 @@ let double = n => n * 2;
 Functions may have local variables: those declared inside its body. Such variables are only visible inside the function.
 Parameters can have default values: `function sum(a = 1, b = 2) {...}.`
 Functions always return something. If there’s no return statement, then the result is undefined.
+
+
+## Conclusion
+
+Woah, that's a lot of info! Yeah its a lot to take in I know, but mastering the basics will take you much further than the majority of anything flashy!   
 
