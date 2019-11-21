@@ -27,7 +27,7 @@ export const Posts = () => {
 	`)
 	return (
 		<Wrapper as={Container} id="posts">
-			<h2>Posts</h2>
+			<h2>My Blog Posts</h2>
 			<Grid>
 				{allMarkdownRemark.edges.map(({ node }) => (
 					<Item
