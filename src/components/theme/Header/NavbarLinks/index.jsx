@@ -10,6 +10,7 @@ const NavbarLinks = ({ desktop }) => (
 		<AnchorLink href="#prices">Prices</AnchorLink>
 		<AnchorLink href="#travel">Travel</AnchorLink>
 		<AnchorLink href="#contact">Contact</AnchorLink>
+		<Link to="/cv">CV</Link>
 		<Link to="/blog">Blog</Link>
 	</Wrapper>
 )
