@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from 'Common'
 import { Wrapper, Flex, Links, Details } from './styles'
 import social from './social.json'
+import CV from '../../../../static/cv/David_O_Regan_-_Resume_New.pdf'
 
 export const Footer = () => (
 	<Wrapper>
@@ -35,6 +36,7 @@ export const Footer = () => (
 						<img width="24" src={icon} alt={name} />
 					</a>
 				))}
+				 <a href={`${CV}`} download>My CV</a>
 			</Links>
 		</Flex>
 	</Wrapper>
