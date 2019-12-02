@@ -130,7 +130,7 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 ```
 
-And thats it! All we do here is create the base node server and lean on express to handle our engine. Not thw worst eh?
+And thats it! All we do here is create the base node server and lean on express to handle our engine. Not the worst eh?
 
 #### Our Customer Routes Setup
 
