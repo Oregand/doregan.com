@@ -1,6 +1,6 @@
 ---
 title: A Python Flask Todo Application Tutorial
-date: "2019-11-29T22:12:03.284Z"
+date: "2019-12-06T22:12:03.284Z"
 path: /blog/flask-todo
 description: "A Python Flask Todo Application Tutorial"
 ---
