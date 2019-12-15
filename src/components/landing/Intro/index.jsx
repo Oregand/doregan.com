@@ -17,7 +17,7 @@ export const Intro = () => (
 				</Button>
 			</Details>
 			<Thumbnail>
-				<img src={dev} alt="I’m David O'Regan and I’m a frontend/JavaScript developer from Ireland." />
+				<img src={dev} alt="I’m David O'Regan and I’m a FullStack developer from Ireland." />
 			</Thumbnail>
 		</IntroWrapper>
 	</Wrapper>
