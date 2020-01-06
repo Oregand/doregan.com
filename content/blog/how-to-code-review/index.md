@@ -739,6 +739,131 @@ computed: {
 - The code is written plainly and easy to reason about. 
 - No deep abstractions.
 
+## Bonus Round! Fix the failing tests without any other improvements. 
+
+So first, we need to refine our HAML into a pure `.vue` file.
+
+```
+<script>
+import axios from 'axios';
+import jsyaml from 'js-yaml';
+
+export default {
+  data: function () {
+    return {
+      teamData: [],
+      selected: null,
+      dep: null
+    }
+  },
+  methods: {
+    async getTeamData() {
+      const { data } = await axios.get(
+      `${'https://cors-anywhere.herokuapp.com/'}https://gitlab-frontend.surge.sh/team.yml`, {
+        crossdomain: true,
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+      });
+      return jsyaml.load(data);
+    },
+    selectRandomPerson() {
+      return Math.floor(Math.random() * this.teamData.length)
+    },
+    async generate() {
+      this.teamData = await this.getTeamData();
+      this.selected = this.selectRandomPerson();
+
+      while(this.teamData[this.selected].departments[0] === this.dep) {
+        this.selected = this.selectRandomPerson();
+      }
+    },
+  }
+}
+</script>
+
+<template>
+  <div>
+    <div class="header-bar" />
+    <div class="container">
+      <b class="title">Onboarding Buddy Generator</b>
+      <span>
+        <div>
+          <b class="sub-title">New team member's department</b>
+          <select v-model="dep">
+             <option>Engineering Function</option>
+              <option>Executive</option>
+              <option>Sales</option>
+              <option>Product Management</option>
+              <option>Finance</option>
+              <option>Marketing</option>
+              <option>Board</option>
+              <option>Advisors</option>
+              <option>Board Observers</option>
+              <option>Technical Writing</option>
+              <option>Customer Success</option>
+              <option>Vacancy</option>
+              <option>Alliances</option>
+              <option>People Ops</option>
+              <option>Legal</option>
+              <option>Business Operations</option>
+              <option>Core Team</option>
+              <option>Recruiting</option>
+              <option>Solutions Architects</option>
+              <option>Sales, Field Ops</option>
+              <option>Payroll</option>
+              <option>Sales NQR</option>
+              <option>finance</option>
+              <option>Meltano</option>
+              <option>Infrastructure Department</option>
+              <option>Development Department</option>
+              <option>Corporate Marketing</option>
+              <option>Security Department</option>
+              <option>Digital Marketing</option>
+          </select>
+          We want to help you select a buddy from a different department so that your new team member can get to know other people in the company.
+          <button class="generate-btn" @click="generate">Generate buddy</button>
+        </div>
+      </span>
+    </div>
+    <span v-if="selected" class="selected-buddy">
+      <b>Your onboarding buddy is</b>
+      <div class="image-container">
+        <img :src="`https://gitlab.com/gitlab-com/www-gitlab-com/raw/master/source/images/team/${this.teamData[this.selected].picture}`" />
+      </div>
+      <a :href="`https://gitlab.com/${this.teamData[this.selected].gitlab}`" target="_blank">{{ teamData[selected].name }}</a>
+    </span>
+  </div>
+</template>
+```
+
+Then we update our test to use `async` instead of `done`.
+
+```
+test('generates teamData and selected person', async () => {
+    const component = mount(BuddyGeneratorApp);
+    const data = await component.vm.getTeamData();
+    // component.vm.getTeamData = jest.fn(() => Promise.resolve(teamJson))
+
+    component.vm.generate()
+      .then(() => {
+        expect(component.vm.teamData[0].name).toEqual(teamJson[0].name);
+        expect(component.vm.teamData[1].name).toEqual(teamJson[1].name);
+        expect(component.vm.teamData[2].name).toEqual(teamJson[2].name);
+        expect(component.vm.teamData[3].name).toEqual(teamJson[3].name);
+        expect(component.vm.selected >= 0).toBeTruthy();
+        expect(component.vm.selected).toBeLessThan(teamJson.length);
+
+        component.vm.$nextTick(() => {
+          expect(component.vm.$el.querySelector('b').innerHTML).toEqual('Onboarding Buddy Generator');
+          expect(component.vm.$el.querySelector('b').innerHTML.length).toBeGreaterThan(0);
+          // done();
+        });
+      });
+  });
+```
+
+
 ## Conclusion
 
 TLDR;
