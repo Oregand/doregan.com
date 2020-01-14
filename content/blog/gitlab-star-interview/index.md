@@ -303,7 +303,7 @@ I would like to:
 
 #### What were you most satisfied with in your recent/current position?   
 
-The introduction of a fluid code review process / delivery of two mobile applications in a very short time span.
+The introduction of a fluid code review process for our external component libary / delivery of two mobile applications in a very short time span.
 
 #### Explain to me a complex piece of code you worked on?
 
