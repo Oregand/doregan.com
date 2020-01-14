@@ -129,6 +129,32 @@ Go into CodePen and create a static blog homepage. We'll need a navigation menu,
 
 ##### Prototype && Prototype Chain
 
+##### Create optomized list
+
+```
+const list = [{ name: 'name1', departments: ['1', '2'] }, { name: 'name2', departments: ['3', '4'] }, { name: 'name2', departments: ['1', '5'] }, { name: 'name2', departments: ['6', '7'] }, { name: 'name2', departments: ['8', '9'] }];
+
+const list1 = list.map(el => el.departments).flat().reduce((unique, item) => unique.includes(item) ? unique : [...unique, item]);
+
+document.querySelector('.result').innerHTML = list1;
+```
+
+Whats happening here?
+
+First, we map over the array to reduce it to just `departments`, which gives us a nested array of arrays:
+
+`[['1', '2'], ['3', '4'], ['1', '5']]`
+
+Which we then call `flat()` on to make it a flattened array: 
+
+`['1', '2', '3', '4', '1', '5']`
+
+And finally we reduce the array to remove the duplicates using `includes` to check:
+
+`reduce((unique, item) => unique.includes(item) ? unique : [...unique, item])`
+
+If the current array `unique` includes the current `item`, only return the array itself, otherwise return a new array with the item appended to it: `[...unique, item]`
+
 
 #### Is this person going to be self sufficient in this role?
 
