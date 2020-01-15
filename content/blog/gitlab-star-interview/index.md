@@ -388,6 +388,12 @@ Why? Because we are using a reference and not coping the value into the funciton
 
 ##### Prototype && Prototype Chain
 
+Every object in Javascript has a *prototype*.
+
+###### Prototype chains (aka prototype inheritance)
+
+When a message reaches a object, JavaScript will attempt to find a property in that object first, if it cannot find it then, the message will be sent to the objects prototype and so on. 
+
 ```
 
 ```
