@@ -118,13 +118,55 @@ Go into CodePen and create a static blog homepage. We'll need a navigation menu,
 
 ##### What is garbage colection in JS?
 
+All programming languages have a memeory lifecycle:
 
+1. Allocate memeory 
+2. Use memory
+3. Deallocate memory 
+
+Javascript will release when the memory is not needed anymore. JavaScript, utilize a form of automatic memory management known as garbage collection (GC).
+
+- Reference-counting garbage collection
+
+This is the most naive garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object is still needed to determining if an object still has any other objects referencing it. An object is said to be "garbage", or collectible if there are zero references pointing to it.
 
 ##### JS Closure
 
+A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+```
+function init() {
+    var name = "Mozilla"; // name is a local variable created by init
+    function displayName() { // displayName() is the inner function, a closure
+        alert (name); // displayName() uses variable declared in the parent function    
+    }
+    displayName();    
+}
+init();
+```
+
 ##### Explain this
 
+In most cases `this` is determined by *how* a function is called(runtime binding). 
+
+```
+const test = {
+    prop: 42,
+    func: function() {
+        return this.prop
+    }
+}
+
+console.log(test.func())
+```
+
 ##### Explain call, apply and bind
+
+`call`, `apply` and `bind` are all ways of setting the context of `this` during function execution.
+
+- `bind` => bind attaches `this` into function and it needs to be invoked separately at a later date.
+- `call` => call attaches `this` to a function and calls the function immediatly
+- `apply` => apply is similar to `call` except it takes an array like object instead of listing the arguments one at a time
 
 ##### Primitive vs Reference value
 
