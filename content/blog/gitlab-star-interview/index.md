@@ -114,10 +114,11 @@ Lets create a senario to test that:
 Go into CodePen and create a static blog homepage. We'll need a navigation menu, and we'll need a place for the title and article, and then at the bottom let's have some comments and a footer.
 ```
 
-
 #### Is this person technically where they need to be for this role?
 
 ##### What is garbage colection in JS?
+
+
 
 ##### JS Closure
 
@@ -487,6 +488,8 @@ class Tree {
 }
 ```
 
+The DFS uses a Stack to traverse down the tree of nodes. We will declare the current node by shifting off the first value of the array. With this node, we will check to see if its data is equal to the value we are searching for. If its equal, we will return True and exit out of the function. If the node’s value does not match, we will push the children of that node to the front of the array if they exists. We unshift the children to the front because the DFS approach wants us to go all the way to the bottom of the tree before checking any sibling element. If no value matches after searching the whole tree, we return false at the end of our function.
+
 ```
 class Tree {
     constructor() {
@@ -525,6 +528,8 @@ class Tree {
     }
 }
 ```
+
+When we use the BFS approach, we want to check all sibling elements before going to the next row of the tree. We will accomplish this by using a Queue. The Queue requires us to use the push method instead of the unshift method when handling the children of the node. Instead of taking the children of a node and setting them into the front of the collections array, we will instead push them to the end. This makes sure that we will check all sibling elements before going to the next row of the tree.
 
 ### STAR Questions 
 
