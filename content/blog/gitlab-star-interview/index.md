@@ -179,29 +179,144 @@ console.log(test.func())
 - `call` => call attaches `this` to a function and calls the function immediatly
 - `apply` => apply is similar to `call` except it takes an array like object instead of listing the arguments one at a time
 
-##### Arrays
+##### Clone A Object
 
-##### Functions
+```
+// Old
+const circle = { radius: 1, draw() { console.log('draw) } }
 
-##### Loops
+const another = {};
 
-##### Factory Functions
+for(let key in circle) {
+    another[key] = circle[key]
+}
 
-##### Constructor Functions
+another['radius'] = circle['radius']
+
+console.log(another) // { radius: 1, draw() { console.log('draw) } }
+
+
+// Object.assign
+
+const another = Object.assign({}, circle) // { radius: 1, draw() { console.log('draw) } }
+
+const anotherBonus = Object.assign({
+    color: 'yellow'
+}, circle) // { radius: 1, draw() { console.log('draw) }, color: 'yellow' }
+
+// Spead 
+const another = { ...circle };
+```
 
 ##### Getters/Setters
 
-##### Scope
+```
+const person = {
+    first: 'David',
+    last: 'OR'
+    get fullName() {
+        return `${person.first} ${person.last}`
+    }
+    set fullName(value) {
+        const parts = value.split(' ');
+        this.firstName = value[0]
+        this.lastName value[1]
+    }
+}
+
+person.fullName(); // David OR
+
+person.fullName = 'Some Name'
+person.fullName(); // Some Name
+```
+
+##### Factory Functions
+
+```
+// Factory Functions Produce Objects
+
+function createCircle({ radius, location }) {
+    return {
+        radius: radius,
+        location,
+        draw() {
+            console.log('draw)
+        }
+    }
+}
+
+const circle1 = createCircle({  })
+const circle2 = createCircle({  })
+```
+
+##### Constructor Functions
+
+```
+// Use Pascal Case => OneTwoThree
+
+function Circle({ radius, location }) {
+    this.radius = radius;
+    this.location = location;
+
+    this.draw = function() {
+        console.log('draw)
+    }
+}
+
+const circle = new Circle({  })
+```
+
+##### Scope => Local Vs Global
+
+`var` = is functionally scoped because the variable is hoisted to the top of the function.
+`let` = block scoped but re-assignable
+`const` = block scoped but not re-assignable
+
+```
+function start() {
+    const message = 'hi'
+
+    if(true) {
+        const again = 'bye'
+        let again1 = 'bye'
+        var again2 = 'bye
+        again1 = 'no'
+    }
+
+    console.log(again) // ReferenceError: hoist is not defined
+    console.log(again2) // again2: undefined
+}
+```
+
+What happens to the `var`?
+
+```
+// This
+console.log(hoist); // Output: undefined
+var hoist = 'The variable has been hoisted.';
+
+
+// Becomes
+var hoist;
+console.log(hoist); // Output: undefined
+hoist = 'The variable has been hoisted.';
+```
 
 ##### let, var, const
 
-##### Clone A Object
-
-##### map, filter && reduce
+- `var` = is functionally scoped because the variable is hoisted to the top of the function.
+- `let` = block scoped but re-assignable
+- `const` = block scoped but not re-assignable
 
 ##### Primitive vs Reference value
 
+```
+```
+
 ##### Prototype && Prototype Chain
+
+```
+```
 
 ##### Create optomized list
 
