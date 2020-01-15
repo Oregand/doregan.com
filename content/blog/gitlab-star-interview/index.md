@@ -593,7 +593,7 @@ When I was in VSWare we wanted to create a external set of components for our ap
 
 #### Give an example of a goal you reached and tell me how you achieved it.
 
-
+When I was in VSWare we wanted to create a external set of components for our application. A internal toolset that would keep the application style constiant and reduce code bloat. I created the repo, set up the migration process and myself tackled the process one component at a time with the help of team members that were free. We completed a full migration in just under 12 weeks. 
 
 #### Describe a decision you made that wasn't popular, and explain how you handled implementing it.
 
@@ -601,8 +601,11 @@ I once offered a solution for the graceful deprecation of components that wasnt 
 
 #### Give an example of how you worked on a team.
 
+When I was in VSWare, I worked as parts of various teams accross the years from a memeber of a feature team. This ranged from being a junior frontend developer building screens to a manager of all the technical aspects of the frontend team.
+
 #### What do you do if you disagree with someone at work? 
 
+One time in VSWare I disagreeded with the head of UX on how we should apporach the implementation of a new feature. After a 1-1 session between us where we also brought in another trusted memeber of the team, we reached a compromise.
 
 #### Share an example of how you were able to motivate employees or co-workers. 
 
