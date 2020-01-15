@@ -310,12 +310,86 @@ hoist = 'The variable has been hoisted.';
 
 ##### Primitive vs Reference value
 
+In JS we have two value types: `primitive` and `reference`.
+
+Primitive values are stored on the `stack`, reference values on the `heap`
+
+- Primitive
+    - String
+    - Boolean
+    - String 
+    - null
+    - undefined
+    - Symbol
+
+- Reference 
+    - Objects
+    - functions 
+    - Arrays 
+
+*Arrays and functions are also objects*
+
 ```
+// Copy primitive by value 
+
+let x = 10;
+let y = x;
+
+x = 20
+
+console.log(x, y) // 20, 10
 ```
+
+```
+// Copy object by reference 
+let x = { value: 10 }
+let y = x;
+
+x.value = 20;
+
+console.log(x, y) // { value: 20 }, { value: 20 }
+```
+
+Why? Because both `x` and `y` are pointing to a object stored on the heap.
+
+Primitive are copied by value, objects are copied by reference
+
+Last example:
+
+```
+let number = 10;
+
+function increase(num) {
+    num++
+}
+
+increase(number)
+
+console.log(number) // 10
+```
+
+Why? Because the param `num` inside the function is copied by value and cannot be used outside the function i.e. it is copied from `number` by value.
+
+However:
+
+```
+let number = { value: 10 };
+
+function increase(num) {
+    num.value++
+}
+
+increase(number)
+
+console.log(number) // 11
+```
+
+Why? Because we are using a reference and not coping the value into the funciton.
 
 ##### Prototype && Prototype Chain
 
 ```
+
 ```
 
 ##### Create optomized list
