@@ -526,6 +526,42 @@ class Tree {
 }
 ```
 
+### STAR Questions 
+
+#### Tell me about how you worked effectively under pressure.
+
+When I was working in VSWare, during my second year we were put against a very difficult delivery of a timetable package. It required a 6 week turn around time just before the Christmas break, when initally we had been told we had 20 weeks. I worked very closely with my CTO at the time implementing key features to ensure a minimal viable delivery. I believe my ability to determine the correct tasks helped us with a successful delivery.
+
+#### How do you handle a challenge? Give an example.
+
+While I was away on vacation, a merge was made into our external component libary that included what should have been a major bump to a common component but was versioned incorrectly. I was called to deal with the issue, and handled it by reverting the change to the common component and allowing that major bump to come in later at the correct time.
+
+####  Have you ever made a mistake? How did you handle it?
+
+I once offered a solution for the graceful deprecation of components that wasnt totally sound. After more time study, I came to understand my error in judgement and proceeded by creating a set of alternative solutions.
+
+####  Give an example of how you set goals.
+
+
+#### Give an example of a goal you reached and tell me how you achieved it.
+
+#### Describe a decision you made that wasn't popular, and explain how you handled implementing it.
+
+I once offered a solution for the graceful deprecation of components that wasnt totally sound. After more time study, I came to understand my error in judgement and proceeded by creating a set of alternative solutions.
+
+#### Give an example of how you worked on a team.
+
+#### What do you do if you disagree with someone at work? 
+
+
+#### Share an example of how you were able to motivate employees or co-workers. 
+
+Vue Amsterdam.
+
+#### Have you handled a difficult situation? How?
+
+I was tasked to manage a employee who had difficulty with the larger scope of the team. I assigned him to a siloed project which he would be able to complete independantly and set up a junior mentorship program for him to champion. Between these two tasks, we were able to foster a good sense of team spirit between him and the rest of the team.
+
 ## Conclusion
 
 TLDR;
