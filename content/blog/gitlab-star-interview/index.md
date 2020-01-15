@@ -589,8 +589,11 @@ I once offered a solution for the graceful deprecation of components that wasnt 
 
 ####  Give an example of how you set goals.
 
+When I was in VSWare we wanted to create a external set of components for our application. A internal toolset that would keep the application style constiant and reduce code bloat. I created the repo, set up the migration process and myself tackled the process one component at a time with the help of team members that were free. We completed a full migration in just under 12 weeks. 
 
 #### Give an example of a goal you reached and tell me how you achieved it.
+
+
 
 #### Describe a decision you made that wasn't popular, and explain how you handled implementing it.
 
