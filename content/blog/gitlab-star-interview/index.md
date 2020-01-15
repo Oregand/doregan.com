@@ -102,6 +102,17 @@ Clement Ho is the Frontend Engineering Manager for Monitor Health department.
 - Infra As Code
 - Kubernetes Management
 
+### Basic Kubernetes
+
+Kubernetes coordinates a highly available cluster of computers that are connected to work as a single unit. 
+
+Cluster => 1 master, multiple nodes 
+Node => Each node has 1 to multiple PODs
+Pod => contains app and volumes for data
+
+- Each cluster has a `master` and a set of nodes.
+- Your containerised app runs inside a node.
+
 ### Five Cores
 
 #### Does this person have a "good head on their shoulders"?
@@ -167,6 +178,26 @@ console.log(test.func())
 - `bind` => bind attaches `this` into function and it needs to be invoked separately at a later date.
 - `call` => call attaches `this` to a function and calls the function immediatly
 - `apply` => apply is similar to `call` except it takes an array like object instead of listing the arguments one at a time
+
+##### Arrays
+
+##### Functions
+
+##### Loops
+
+##### Factory Functions
+
+##### Constructor Functions
+
+##### Getters/Setters
+
+##### Scope
+
+##### let, var, const
+
+##### Clone A Object
+
+##### map, filter && reduce
 
 ##### Primitive vs Reference value
 
@@ -238,7 +269,6 @@ I'll give you an example: You built the comment system for GitLab. For the comme
 - You can use a async action to load this data in the background after page load 
 - Load the data when the comment box scrolls into view
 - Load the data when the user `mouseover`s the `textarea`
-
 
 #### Big O
 
@@ -328,7 +358,7 @@ Any algorithm that performs permutation on a given data set is an example of O(n
 
 #### What can we change in GitLab as an organization to make it better, for example the hiring process or the handbook?  
 
-To make Gitlab better, you could cultivate a better reputation on Glassdoor. I have been using it to study for this exam and I dont feel the reputation shown there is a fair representation of how the compnay operates. 
+To make Gitlab better, you could cultivate a better reputation on Glassdoor. I have been using it to study for this interview and I dont feel the reputation shown there is a fair representation of how the compnay operates. 
 
 #### What do you expect to achieve in your first month at GitLab?  
 
