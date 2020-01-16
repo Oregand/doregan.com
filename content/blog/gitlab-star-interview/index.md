@@ -386,6 +386,24 @@ console.log(number) // 11
 
 Why? Because we are using a reference and not coping the value into the funciton.
 
+##### Compare Objects
+
+```
+const obj1 = {
+    value: 1
+}
+
+const obj2 = {
+    value: 1
+}
+
+const obj3 = obj1
+
+console.log(obj1 === obj2) // false => Objects have equal properties but difference reference values
+
+console.log(obj1 === obj3) // true => Objects point to same reference
+```
+
 ##### Prototype && Prototype Chain
 
 Every object in Javascript has a *prototype*.
