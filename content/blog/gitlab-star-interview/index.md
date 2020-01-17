@@ -13,6 +13,9 @@ With round 3 of the interview process fast approaching, lets do some joint study
 
 The [gitlab handbook](https://about.gitlab.com/handbook/values/#permission-to-play) outlines the values of the company. 
 
+
+They spell CREDIT - Collaberation, Results, Efficiancy, Diversity, Iteration, Transparency
+
 - Collaboration
 
 Helping others is always a priority(even when not directly related to your goals), as is asking for help. 
@@ -842,7 +845,7 @@ When we use the BFS approach, we want to check all sibling elements before going
 
 #### Tell me about how you worked effectively under pressure.
 
-When I was working in VSWare, during my second year we were put against a very difficult delivery of a timetable package. It required a 6 week turn around time just before the Christmas break, when initally we had been told we had 20 weeks. I worked very closely with my CTO at the time implementing key features to ensure a minimal viable delivery. I believe my ability to determine the correct tasks helped us with a successful delivery.
+When I was working in VSWare, during my second year we were put against a very difficult delivery of a timetable package. It required a 6 week turn around time just before the Christmas break, when initally we had been told we had 16 weeks. I worked very closely with my CTO at the time implementing key features to ensure a minimal viable delivery. I believe my ability to determine the correct tasks helped us with a successful delivery.
 
 #### How do you handle a challenge? Give an example.
 
@@ -862,7 +865,7 @@ When I was in VSWare we wanted to create a external set of components for our ap
 
 #### Describe a decision you made that wasn't popular, and explain how you handled implementing it.
 
-I once offered a solution for the graceful deprecation of components that wasnt totally sound. After more time study, I came to understand my error in judgement and proceeded by creating a set of alternative solutions.
+After we had a code review peocess set up in VSWAre, I made a choice to introduce two rules; 1. No features could be submitted without tests, 2. All new components needed to be accompanied by a story book component to serve as a living style guide. Though initally not a popular choice as it introduced more work, after a period of time developers started to see the benifit when less issues came back from QA.
 
 #### Give an example of how you worked on a team.
 
@@ -870,7 +873,7 @@ When I was in VSWare, I worked as parts of various teams accross the years from 
 
 #### What do you do if you disagree with someone at work? 
 
-One time in VSWare I disagreeded with the head of UX on how we should apporach the implementation of a new feature. After a 1-1 session between us where we also brought in another trusted memeber of the team, we reached a compromise.
+Drop constants for mutations but pattern was already there and it largely was a preference choice. I disagreeded.
 
 #### Share an example of how you were able to motivate employees or co-workers. 
 
