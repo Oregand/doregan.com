@@ -7,20 +7,20 @@
   },
   {
     "id": 1,
+    "name": "GitLab",
+    "link": "https://gitlab.com/oregand",
+    "icon": "/icons/fork.svg"
+  },
+  {
+    "id": 2,
     "name": "StackOverflow",
     "link": "https://stackoverflow.com/users/1788750/david-oregan",
     "icon": "/icons/stackoverflow.svg"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Twitter",
     "link": "https://twitter.com/doregan",
     "icon": "/icons/twitter.svg"
-  },
-  {
-    "id": 3,
-    "name": "Linkedin",
-    "link": "https://www.linkedin.com/in/oregand7/",
-    "icon": "/icons/fork.svg"
   }
 ]
