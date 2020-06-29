@@ -24,7 +24,7 @@ export const PricesWrapper = styled.div`
 export const Card = styled.div`
 	background: #fff;
     border-radius: 3px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     flex: 1;
     margin: 8px;
     padding: 30px;
@@ -33,7 +33,7 @@ export const Card = styled.div`
     transition: all 0.5s ease-in-out;
     
     &:hover {
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 1px 1px rgba(0,0,0,0);
     }
 `
 
