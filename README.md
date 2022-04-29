@@ -1,111 +1,175 @@
-# Portfolio for developers
+# doregan.com
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/57c04515-1d1b-46e8-b531-213fabca9cc4/deploy-status)](https://app.netlify.com/sites/gatsby-portfolio-dev/deploys)
-
-## Theme
-[Gatsby-theme-portfolio](https://github.com/smakosh/gatsby-theme-portfolio)
+The personal website of David O'Regan.
 
 ## Features
 
-- Eslint/Prettier configured
-- Scores 100% on a11y / Performance / PWA / SEO
-- PWA (desktop & mobile)
-- Easy to customize
-- Nice project structure
-- Amazing illustrations by [Undraw.co](https://undraw.co)
-- Tablet & mobile friendly
-- Continuous deployment with [Netlify](https://netlify.com)
-- A contact form protected by Google Recaptcha
-- Can be deployed with one click
-- Functional components with ~~Recompose~~ React Hooks! ~~ready to migrate to React hooks!~~
-- Fetches your Github pinned projects with most stars (You could customize this if you wish)
+- [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
+- [x] ✨ [Headless UI](https://headlessui.dev/)
+- [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
+- [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
+- [x] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3)
+- [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
+- [x] 🌙 Switch Theme (light, dark, system, realtime)
+- [x] 🇮🇩 Language Switcher
+- [x] 🪝 Built-in Component & Layout
+- [x] Eslint & Prettier
+- [x] Husky & Commitlint
 
-## Design
+## Table of Contents
 
-Project on [Behance](https://www.behance.net/gallery/74172961/Free-Gatsby-portfolio-for-developers)
+- [doregan.com](#doregan.com)
+  - [Quick Start](#quick-start)
+  - [Notes](#notes)
+    - [Styles](#styles)
+    - [Theme (Dark Mode)](#theme--dark-mode-)
+    - [Localization](#localization)
+    - [Icons](#icons)
+    - [Precommit and Postmerge](#precommit-and-postmerge)
+  - [License](#license)
 
-## Structure
+## Quick Start
 
-```bash
-.
-├── data
-│   └── config              # SEO related tags
-├── src
-│   ├── components          # Components
-│   │   │── common          # Common components
-│   │   │── landing         # Components used on the landing page
-│   │   └── theme           # Header & Footer
-│   └── pages               # Pages
-└── static                  # Icons, favicon & SVG illustrations
+- This project using `yarn` as package manager.
+- Clone this project to your computer `git clone https://github.com/Oregand/doregan.com`
+- Install dependencies `yarn install`
+- Run `yarn dev` to start development server and open `http://localhost:3000` in your browser
+- Run `yarn build` to build project and `yarn start` to start production server
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+
+## Notes
+
+### Styles
+
+Tailwindcss import managed by windicss.
+and you can add custom styles in :
+
+```
+/path/to/assets/sass/app.scss
 ```
 
-## Prerequisites
+### Theme (Dark Mode)
 
-[Yarn](https://yarnpkg.com/en/)
+ThemeManager is a plugin that allows you to switch between themes. this lib in :
 
-Please create a new file `.env.development` and put this env variable with your GitHub token
-
-> If you're building locally, you will have to create a new file `.env.production` and put the same env variable
-
-```bash
-GITHUB_TOKEN=xxxxxxxxxx
+```
+/path/to/utils/theme.ts
 ```
 
-Don't forget to edit your site's data on `data/config.js` file with your Google Recaptcha public key
+`Thememanager` is a function-class construct when app.vue before mounted. theme construct inside `AppSetup()` in `/path/to/app.vue` :
 
-When deploying on Netlify, you will have to set the private key as well
-
-```bash
-SITE_RECAPTCHA_KEY=xxxxx
-
-SITE_RECAPTCHA_SECRET=xxxxx
+```vue
+<!-- /path/to/app.vue -->
+<script lang="ts" setup>
+import { AppSetup } from '~/utils/app';
+// app setup
+AppSetup()
+</script>
 ```
 
-I highly recommend you check this [repository](https://github.com/imorente/gatsby-netlify-form-example) for more details about the Google Recaptcha and Netlify forms
+To change theme, you can direct set theme from state `theme.setting`, example :
 
-## Installing
-
-Installing the dependencies
-
-```bash
-yarn
+```vue
+<script lang="ts" setup>
+import { IThemeSettingOptions } from '~/utils/theme'
+const themeSetting = useState<IThemeSettingOptions>('theme.setting')
+themeSetting.value = 'dark'
+</script>
 ```
 
-## Start the dev server
+When you change state `theme.setting`, it will automatically change theme.
 
-```bash
-yarn start
+Theme Setting have 4 options :
+
+- `light`
+- `dark`
+- `system` (operating system theme)
+- `realtime` (realtime theme, if 05:00 - 17:00, it will change to light theme, otherwise dark)
+
+We have state `theme.current`, this state return `light` or `dark` theme. basically it's process from `theme.setting`.
+dont change theme with this state.
+
+### Localization
+
+Localization is a plugin that allows you to switch between languages. this lib in :
+
+```
+/path/to/utils/lang.ts
 ```
 
-### Clean the cache
+`LanguageManager` is a function-class construct when app.vue before mounted.
+this lib depend on [@intlify/nuxt3](https://github.com/intlify/nuxt3)
+lang construct inside `AppSetup()` in `/path/to/app.vue` :
 
-This removes the `.cache/` & `public/` folders
+<!-- /path/to/app.vue -->
+<script lang="ts" setup>
+import { AppSetup } from '~/utils/app';
+// app setup
+AppSetup()
+</script>
 
-```bash
-yarn reset
+To change language, you can direct set language from state `lang.setting`, example :
+
+```vue
+<script lang="ts" setup>
+const langSetting = useState<string>('locale.setting')
+langSetting.value = 'en'
+</script>
 ```
 
-## Built with
+When you change state `locale.setting`, it will automatically change language.
 
-- Adobe XD
-- Gatsby
-- React & GraphQL
-- VSCode
-- And these useful of JavaScript libraries & Gatsby plugins [package.json](package.json)
+### Icons
+
+This project using unplugin-icons for auto generate and import icon as component.
+
+You can see collection icon list in : [https://icones.js.org/](https://icones.js.org/)
+
+you can use `<prefix-collection:icon />` or `<PrefixCollection:Icon />`.
+
+in this project, configuration prefix as a "icon", you can see in `nuxt.config.ts` :
+
+```js
+export default defineNuxtConfig({
+    ...
+
+    vite: {
+        plugins: [
+            UnpluginComponentsVite({
+                dts: true,
+                resolvers: [
+                    IconsResolver({
+                        prefix: 'Icon',
+                    }),
+                ],
+            }),
+        ],
+    },
+
+    ...
+})
+```
+
+Example :
+
+```vue
+// use icon from collection "Simple Icons" and name icon is "nuxtdotjs"
+<IconSimpleIcons:nuxtdotjs />
+
+// use icon from collection "Unicons" and name icon is "sun"
+<IconUil:sun />
+```
+
+### Precommit and Postmerge
+
+This project using husky and commitlint for precommit and postmerge.
+when you commit, it will check your commit message and running "yarn lint-staged" to check your staged files.
+configuration in : `/path/to/.husky/pre-commit` and `/path/to/commitlint.config.js`
+
+And when Postmerge, it will run "yarn" to automatically install new dependencies.
+configuration in `/path/to/.husky/post-merge`
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Contributors
-
-- [Ajay NS](https://github.com/ajayns) https://github.com/smakosh/gatsby-portfolio-dev/pull/3
-- [Ryan Lee](https://github.com/drdgvhbh) https://github.com/smakosh/gatsby-portfolio-dev/pull/6
-- [David](https://github.com/davidavz) https://github.com/smakosh/gatsby-portfolio-dev/pull/8
-- [Myself](https://smakosh.com)
-
-## Support
-
-If you love this Gatsby template and want to support me, you can do so through my Patreon
-
-[![Support me on Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/smakosh)
+This project is licensed under the MIT license, Copyright (c) 2022 David O'Regan. For more information see the [LICENSE](LICENSE.md) file.

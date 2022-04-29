@@ -1,0 +1,37 @@
+components:
+  language_switcher:
+    change_language: change language
+  theme_switcher:
+    theme: theme
+    change_theme: change theme
+pages:
+  index:
+    title: david, o regan
+  patterns:
+    nav: design patterns
+    title: design patterns
+  refactoring:
+    nav: refactoring
+    title: refactoring
+  data:
+    nav: data structures and algorithms
+    title: data structures and algorithms
+    counter: counter
+    increment: increment
+    decrement: decrement
+    reset: reset
+    identity: identity
+    full_name: fullName
+  javascript:
+    nav: javascript
+    title: javascript
+  dashboard:
+    nav: dashboard
+    title: dashboard
+    index:
+      nav: home
+      title: home
+banners:
+  welcome: hello, welcome to %{app_name}!
+others:
+  learn_more: learn more
