@@ -135,11 +135,6 @@ const menus = computed((): IMenuItem[] => [
   { type: 'link', text: t('pages.javascript.nav'), route: { name: 'javascript' } },
   { type: 'link', text: t('pages.data.nav'), route: { name: 'data' } },
   { type: 'link', text: t('pages.refactoring.nav'), route: { name: 'refactoring' } },
-  { type: 'link', text: t('pages.patterns.nav'), route: { name: 'patterns' } },
-  {
-    type: 'button',
-    text: t('pages.dashboard.nav'),
-    route: { name: 'dashboard' },
-  },
+  { type: 'link', text: t('pages.patterns.nav'), route: { name: 'patterns' } }
 ])
 </script>
